@@ -5,7 +5,7 @@ $ pip install shift-forex-tester-data
 $ shiftdata --help
 Usage: shiftdata [OPTIONS] INPUT_FILE OUTPUT_FILE
 
-  Shift data time so that daily candle closes with price at CLOSING_TIME.
+  Shift data time so that daily candle closes with price at daily closing time.
 
   INPUT_FILE is Forex Tester exported data with defaut settings, OUTPUT_FILE
   has the same format and can be imported back into Forex Tester with default
