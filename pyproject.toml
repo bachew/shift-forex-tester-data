@@ -1,0 +1,26 @@
+[build-system]
+requires = ['setuptools', 'setuptools-scm', 'wheel']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'shift-forex-tester-data'
+dynamic = ['version']
+readme = 'README.md'
+requires-python = '>=3.10'
+authors = [
+    {name='Chew ', email='bachew@gmail.com'}
+]
+dependencies = [
+    'attrs',
+    'click',
+    'python-dateutil',
+]
+
+[project.scripts]
+shiftdata = 'shiftdata.cli:cli'
+
+[tool.setuptools.dynamic]
+version = {attr = 'shiftdata.__version__'}
+
+[tool.setuptools.packages.find]
+where = ['src']
