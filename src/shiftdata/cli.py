@@ -4,9 +4,9 @@ from ._shift import shift_data
 from click import argument, command, option
 from functools import wraps
 from datetime import time, tzinfo
+from dateutil.tz import gettz  # type: ignore
 from pathlib import Path
 import click
-import dateutil  # type: ignore
 
 
 def cli_type(func):
@@ -35,7 +35,7 @@ def get_timezone(timezone: str | tzinfo) -> tzinfo:
     if isinstance(timezone, tzinfo):
         return timezone
 
-    tz = dateutil.tz.gettz(timezone)
+    tz = gettz(timezone)
 
     if tz is None:
         raise ValueError(f'invalid timezone {timezone!r}')
