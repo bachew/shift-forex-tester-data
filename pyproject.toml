@@ -6,10 +6,7 @@ build-backend = 'setuptools.build_meta'
 name = 'shift-forex-tester-data'
 dynamic = ['version']
 readme = 'README.md'
-requires-python = '>=3.10'
-authors = [
-    {name='Chew ', email='bachew@gmail.com'}
-]
+requires-python = '>=3.9'
 dependencies = [
     'attrs',
     'click',
@@ -18,6 +15,10 @@ dependencies = [
 
 [project.scripts]
 shiftdata = 'shiftdata.cli:cli'
+
+[project.urls]
+Homepage = 'https://github.com/bachew/shift-forex-tester-data'
+Repository = 'https://github.com/bachew/shift-forex-tester-data'
 
 [tool.setuptools.dynamic]
 version = {attr = 'shiftdata.__version__'}

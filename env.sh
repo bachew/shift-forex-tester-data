@@ -3,7 +3,7 @@
 #
 # import os
 #
-# os.environ['TWINE_PASSWORD'] = '******'
+# os.environ['TWINE_PASSWORD'] = API_TOKEN
 #
 #
 # The variables set in env.py will be available in development.

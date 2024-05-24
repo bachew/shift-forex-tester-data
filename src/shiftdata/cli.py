@@ -1,3 +1,4 @@
+from __future__ import annotations
 from . import __version__
 from ._shift import shift_data
 from click import argument, command, option
@@ -54,7 +55,7 @@ def get_timezone(timezone: str | tzinfo) -> tzinfo:
 @argument('output_file', type=Path)
 def cli(closing_time, timezone, include_weekends, input_file, output_file):
     '''
-    Shift data time so that daily candle closes with price at CLOSING_TIME.
+    Shift Forex Tester data time so that daily candle closes with price at CLOSING_TIME.
 
     INPUT_FILE is Forex Tester exported data with defaut settings,
     OUTPUT_FILE has the same format and can be imported back into
